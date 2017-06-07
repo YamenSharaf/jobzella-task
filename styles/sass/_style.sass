@@ -33,7 +33,7 @@ body
 		@media screen and (max-width: 500px)
 			width: 90vw
 		.card__content
-			width: 100%
+			flex-grow: 4
 			height: auto
 			
 			.card__title
@@ -88,4 +88,7 @@ body
 				background-color: white
 				cursor: pointer
 				border: 3px solid $color__accent
-				border-radius: 7px			
+				border-radius: 7px
+				&:hover
+					background-color: $color__primary
+					color: white			
