@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Job Board</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="styles/css/app.css" rel="stylesheet">
+	<script src="https://vuejs.org/js/vue.min.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		
+		<div class="header">
+			<h1><i class="fa fa-briefcase" aria-hidden="true"></i> لديك <span> {{jobCount}} </span> وظائف </h1>
+			
+		</div>
+		<div v-for="job in jobs" class="card">
+			<div class="card__content">
+				<h3 class="card__title">
+				<span>الوظيــفة:  </span> {{job.title}}
+			</h3>
+			<div class="card__label">
+				<p> {{job.status}} </p>
+			</div>
+
+			<div class="card__info">
+				<ul class="card-info__list">
+					<li class="card-info__list-item"> <span>الشركة:  </span> {{job.company}} </li>
+					<li class="card-info__list-item"> <span>مقر العمل:  </span> {{job.address}} </li>
+					<li class="card-info__list-item"> <span>تاريخ الإنتهاء:  </span> {{job.date}} </li>
+				</ul>
+			</div>
+			<div class="card__status">
+				<ul class="card-status__list">
+					<li status-list__item><i class="fa fa-eye" aria-hidden="true"></i>
+  {{job.views}} </li>
+ <li status-list__item><i class="fa fa-search" aria-hidden="true"></i>
+
+  {{job.searched}} </li>
+				</ul>
+				 
+			</div>
+		</div>
+
+		<div class="card__controls">
+			<button type="button"> <i class="fa fa-cog" aria-hidden="true"></i>
+ التحكم</button>
+			
+		</div>
+		</div>
+		
+		
+	</div>
+
+	<script src="code.js">
+	</script>
+</body>
+
+</html>
